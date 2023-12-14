@@ -8,14 +8,19 @@ margin: -8px;
 }
 
 .chatroomSection {
+background-color: #e1b382;
+box-shadow:  5px 7px #c89666;
+border-radius: 8px;
 width: 40vw;
 height: 80vh;
 margin: auto;
-border: 1px solid #eee;
+border: 1px solid #2d545e;
 position: relative;
 }
 
 .chatroomContent {
+    background-color: white;
+    border-radius: 8px;
 position: absolute;
 top: 2.5rem;
 left: 0;

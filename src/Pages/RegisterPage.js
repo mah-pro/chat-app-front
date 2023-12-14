@@ -22,7 +22,7 @@ const RegisterPage = () => {
             const password = passwordRef.current.value;
 
             // Appel à l'API pour enregistrer l'utilisateur
-            const response = await axios.post("/user/register", {
+            const response = await axios.post("http://localhost:8000/register", {
                 name,
                 email,
                 password,

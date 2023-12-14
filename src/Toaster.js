@@ -8,7 +8,7 @@ position: 'top-end',              // Position du toast en haut à droite de l'é
 showConfirmButton: false,          // Ne montre pas de bouton de confirmation
 timer: 3000,                       // Durée d'affichage du toast en millisecondes (ici, 3 secondes)
 timerProgressBar: true,            // Affiche une barre de progression pendant la durée du toast
-onOpen: (toast) => {
+didOpen: (toast) => {
 // Pause du minuteur en survol de la souris
 toast.addEventListener('mouseenter', Swal.stopTimer);    // Si la souris survole le toast, le minuteur est mis en pause
 toast.addEventListener('mouseleave', Swal.resumeTimer);   // Si la souris quitte le toast, le minuteur reprend

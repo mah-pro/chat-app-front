@@ -3,6 +3,7 @@ import React from "react";
 // Importation du hook useNavigate depuis la bibliothèque react-router-dom
 import { useNavigate } from "react-router-dom";
 
+
 // Définition du composant fonctionnel IndexPage
 const IndexPage = () => {
 // Utilisation du hook useNavigate pour obtenir la fonction de navigation
@@ -23,18 +24,18 @@ navigate("/login");
 // Rendu du composant
 return (
 <>
+    <div className="home-page">
     {/* Section du titre de l'application */}
-    <div className="title-container">
-    <div className="app-container">
-        <h1 className="app-title">NIO FARR MESSENGER</h1>
-        <h2 className="app-title">HOME</h2>
-    </div>
-    </div>
+    <section className="title-container">
+	    <div className="content">
+		    <h2>NIOFARR</h2>
+		    <h2>NIOFARR</h2>
+	    </div>
+    </section>  
 
     {/* Section de l'image du corps */}
     <div className="body-img">
-    {/* Utilisation de l'image avec le chemin "src/téléchargement-removebg-preview.png" et l'alt "mon logo" */}
-    <img src="src/téléchargement-removebg-preview.png" alt="mon logo" />
+        <img src="./mon-logo.jpeg" alt="mon logo" />
     </div>
 
     {/* Section du conteneur central avec les boutons */}
@@ -48,6 +49,7 @@ return (
         <button className="click-button" onClick={handleLoginClick}>
         CONNEXION
         </button>
+    </div>
     </div>
     </div>
 </>

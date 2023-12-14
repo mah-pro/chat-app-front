@@ -2,6 +2,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 // Importation du hook useParams de react-router-dom pour extraire les paramètres de l'URL
 import { useParams } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+
+
 
 // Composant fonctionnel ChatroomPage avec une prop socket
 const ChatroomPage = ({ socket }) => {
@@ -13,6 +16,9 @@ const ChatroomPage = ({ socket }) => {
     const messageRef = useRef();
     // État local pour stocker l'identifiant de l'utilisateur actuel
     const [userId, setUserId] = useState("");
+    
+    const navigate = useNavigate();
+
 
     // Fonction pour envoyer un message à la chatroom
     const sendMessage = () => {
@@ -64,10 +70,16 @@ const ChatroomPage = ({ socket }) => {
             };
         }
     }, [id, socket]);
+    
+
+    const handleBack = () => {
+        navigate("/dashboard");
+    };
 
     // Rendu du composant ChatroomPage
     return (
         <div className="chatroomPage">
+            <button onClick={handleBack}>RETOUR</button> 
             <div className="chatroomSection">
                 {/* En-tête de la chatroom (peut être dynamiquement rempli avec le nom de la chatroom) */}
                 <div className="cardHeader">Chatroom Name</div>

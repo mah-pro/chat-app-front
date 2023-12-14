@@ -73,7 +73,7 @@ return (
         ref={passwordRef}
         />
     </div>
-    <button onClick={loginUser}>Connexion</button>
+    <button onClick={loginUser}>Se Connecter</button>
     </div>
     <br />
     <div>
